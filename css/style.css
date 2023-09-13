@@ -1,0 +1,522 @@
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------- MAIN ------- */
+
+/* -------------------- */
+
+/* ---------- COLORS  ---------- */
+
+/* ----------------------------- */
+
+/* ---------- SIZES ---------- */
+
+/* --------------------------- */
+
+/* ----- Z-INDEX ----- */
+
+/* ------------------- */
+
+/* ---------- BREAKPOINTS ---------- */
+
+/* --------------------------------- */
+
+/* ---------- DEVICE DEFINITION --------- */
+
+/* -------------------------------------- */
+
+/* ---------- Hover only for PC  ---------- */
+
+.forexample {
+  background-color: red;
+}
+
+/* ---------------------------------------- */
+
+/* ---------- COLUMNS ---------- */
+
+/* ------------------------------ */
+
+/* ---------- Variable font supports ---------- */
+
+/* -------------------------------------------- */
+
+/** Px to rem function
+
+@function rem($px, $default: 16) {
+    @return calc(($px / $default) * 1rem);
+}
+
+- Use: rem(16)
+
+*/
+
+html,
+body {
+  height: 100%;
+  font-family: "DM Sans", sans-serif;
+  -letter-spacing: -0.5px;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #171718;
+  --purple: #5c62ec;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer {
+  background: var(--black);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: "wght" 400) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-variation-settings: "wght" 400;
+  }
+}
+
+.nav {
+  padding: 20px 0;
+  border-bottom: 1px solid #26292d;
+  background-color: #171718;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
+.nav-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+  color: var(--white);
+}
+
+.nav-logo strong {
+  font-weight: 700;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.nav-list__link {
+  color: #ffffff;
+}
+
+.nav-list__link--active {
+  position: relative;
+}
+
+.nav-list__link--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #5c62ec;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #171718;
+  background-image: url("./../img/Abstract.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  color: var(--white);
+  text-align: center;
+}
+
+.header__wrapper {
+  padding: 180px 0 250px;
+}
+
+.header__title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  /* or 84px */
+  text-align: center;
+  /* White */
+  color: #fafafa;
+}
+
+.header__title strong {
+  font-size: 60px;
+}
+
+.header__title span {
+  color: #5c62ec;
+}
+
+.header__subtitle {
+  padding: 20px 0 40px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+  text-align: center;
+  /* Blanco */
+  color: var(--white);
+}
+
+.header__button {
+  display: inline-block;
+  height: 48px;
+  padding: 12px 28px;
+  background: var(--purple);
+  border-radius: 5px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* Blanco */
+  color: var(--white);
+}
+
+.header__button:hover {
+  opacity: 0.8;
+}
+
+.header__button:active {
+  position: relative;
+  top: 1px;
+}
+
+.project {
+  padding: 70px 0;
+}
+
+.project__title {
+  margin-bottom: 60px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+  /* identical to box height, or 78px */
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--purple);
+}
+
+.project__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.project__list-item {
+  max-width: 370px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.project__img {
+  border-radius: 10px;
+}
+
+.project__subtitle {
+  padding: 15px 20px 25px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+
+.section__project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.project-sait__project__title {
+  padding: 70px 0 40px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+  /* identical to box height, or 78px */
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--purple);
+}
+
+.project-sait__project__subtitle {
+  margin-bottom: 30px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 31px */
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+
+.project-sait__project__button {
+  display: inline-block;
+  margin-bottom: 70px;
+  padding: 12px 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+
+.footer__icons {
+  padding: 60px 0 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.footer__subtitle {
+  padding-bottom: 50px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: var(--white);
+}
+
+/* //*Shorthand background for webpcss plugin works in 'style.scss' only!
+
+.div{
+	background: url("../img/6.png") center center / cover no-repeat;
+}
+
+*/
+
+.header {
+  background-image: url(./../img/Abstract.webp);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .forexample:hover {
+    background-color: black;
+  }
+}
